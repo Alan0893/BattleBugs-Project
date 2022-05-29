@@ -6,14 +6,6 @@ import info.gridworld.grid.BoundedGrid;
 import java.awt.Color;
 import java.util.ArrayList;
 
-import BattleBugs.Bugs.Const;
-import BattleBugs.Bugs.Jerry;
-import BattleBugs.Bugs.Pedilinguini;
-import BattleBugs.Bugs.Radmir;
-import BattleBugs.Bugs.MooMooCow;
-import BattleBugs.Bugs.Rex;
-import BattleBugs.Bugs.Reaper;
-import BattleBugs.Bugs.Chu;
 import info.gridworld.actor.Actor;
 
 /**
@@ -33,10 +25,10 @@ public class GameDriver1Test
         BBWorld world = new BBWorld(gr);
 
         //This is where you enter your Bugs into the game
-	    battleBugs.add(new Chu(0,5,0, "Chu", null));
-	    battleBugs.add(new Reaper(0,5,0,"Reaper", null));
-	    battleBugs.add(new Radmir(0,5,0, "Radmir", null));
-        battleBugs.add(new Const(0, 5, 0, "Const", null));
+	battleBugs.add(new BBExample(0,5,0, "BBExample1", null));
+	battleBugs.add(new BBExample(0,5,0,"BBExample2", null));
+	battleBugs.add(new BBExample(0,5,0, "BBExample3", null));
+        battleBugs.add(new BBExample(0, 5, 0, "BBExample4", null));
         Regulator theBoss = new Regulator(battleBugs);
 
         world.add(new Location(DEFAULT_ROWS/2, DEFAULT_COLS/2), theBoss);
